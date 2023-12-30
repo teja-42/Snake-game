@@ -21,7 +21,7 @@ black=(0,0,0)
 x1=window_width/2
 y1=window_height/2
 
-# Food position
+#Food position
 foodx=round(random.randrange(0,window_width-10)/10)*10.0
 foody=round(random.randrange(0,window_height-10)/10)*10.0
 
