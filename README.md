@@ -21,6 +21,7 @@ black=(0,0,0)
 x1=window_width/2
 y1=window_height/2
 
+# Food position
 foodx=round(random.randrange(0,window_width-10)/10)*10.0
 foody=round(random.randrange(0,window_height-10)/10)*10.0
 
@@ -68,7 +69,7 @@ while not game_over:
 
     if len(snake_body)>length_of_sanke:
         del snake_body[0]
-
+    # If snake touches its own body game over
     for segment in snake_body[:-1]:
         if segment==snake_head:
             game_over=True
@@ -77,6 +78,7 @@ while not game_over:
     score_text=font_style.render("Score: "+str(score),True,white)
     window.blit(score_text,(0,0))
 
+    #Food appearing at random postions
     if x1==foodx and y1==foody:
         foodx=round(random.randrange(0,window_width-10)/10)*10.0
         foody=round(random.randrange(0,window_height-10)/10)*10.0
